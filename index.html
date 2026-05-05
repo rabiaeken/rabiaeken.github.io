@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabia Ceyda Eken | Portfolyo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --container-bg: #161b22;
+            --accent-blue: #4285F4;
+            --text-primary: #ffffff;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+            --gradient: linear-gradient(135deg, #02030c 0%, #12131b 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: var(--gradient);
+            position: relative;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .typewriter {
+            font-family: 'Fira Code', monospace;
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease;
+        }
+
+        .linkedin { background: #0077B5; color: white; }
+        .github { background: #181717; color: white; }
+        .email { background: #D14836; color: white; }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Container & Sections */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        section {
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--accent-blue);
+        }
+
+        .date {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background: #21262d;
+            border: 1px solid var(--border-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Stats Section */
+        .stats {
+            text-align: center;
+        }
+
+        .stats img {
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Rabia Ceyda Eken</h1>
+        <div class="typewriter">Computer Engineering Student @ Bilgi University</div>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/rabia-eken-7a0a182a0" class="linkedin">LinkedIn</a>
+            <a href="https://github.com/rabiaeken" class="github">GitHub</a>
+            <a href="mailto:rabiaeken987@gmail.com" class="email">Email</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- About -->
+        <section id="about">
+            <h2>👤 Hakkımda</h2>
+            <p>
+                İstanbul Bilgi Üniversitesi'nde Bilgisayar Mühendisliği öğrencisiyim. Yapay zeka, veri bilimi ve makine öğrenmesi üzerine odaklanıyor, Python ile veri analitiği ve tahminleme modelleri geliştiriyorum. Ayrıca siber güvenlik dünyasına ilgi duyuyor ve aktif olarak CTF yarışmalarına katılıyorum.
+            </p>
+            <p style="margin-top: 15px; color: var(--text-secondary);">
+                <b>Eğitim:</b> İstanbul Bilgi Üniversitesi (2023 - Günümüz)
+            </p>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2>🚀 Deneyim & Roller</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Software Persona (TNC Group)</h3>
+                    <span class="date">Mayıs 2026 - Haziran 2026</span>
+                    <p>Yazılım Mühendisliği Stajyeri olarak gerçek dünya projelerine katkı sağlayacak.</p>
+                </div>
+                <div class="card">
+                    <h3>Bilgi AI Club</h3>
+                    <span class="date">2025 - Günümüz</span>
+                    <p>Sponsorluk ve Ortaklıklar Ekibi Üyesi olarak sektör ağlarını yönetme ve etkinlik planlama.</p>
+                </div>
+                <div class="card">
+                    <h3>Beyoğlu Gençlik Merkezi</h3>
+                    <span class="date">2024 - Günümüz</span>
+                    <p>Gönüllü Gençlik Lideri olarak topluluk programlarını ve gençlik faaliyetlerini destekleme.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>💡 Öne Çıkan Projeler</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Teknofest AI Project</h3>
+                    <p>Immuno-Oncology 3T projesi ile yapay zeka destekli tıbbi analiz iş akışında yarı finalist derecesi.</p>
+                </div>
+                <div class="card">
+                    <h3>Medical Insurance Prediction</h3>
+                    <p>Sigorta maliyetlerini tahmin etmek için kapsamlı EDA, özellik mühendisliği ve regresyon modelleme çalışması.</p>
+                </div>
+                <div class="card">
+                    <h3>Chess Engine AI</h3>
+                    <p>Python-chess kütüphanesi ve Stockfish motoru ile geliştirilmiş analitik satranç koçu.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>🔧 Yetenekler</h2>
+            <div class="skills-container">
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">Java</span>
+                <span class="skill-badge">C++</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">Pandas</span>
+                <span class="skill-badge">NumPy</span>
+                <span class="skill-badge">Scikit-Learn</span>
+                <span class="skill-badge">AWS Architecture</span>
+                <span class="skill-badge">Cybersecurity (CTF)</span>
+            </div>
+        </section>
+
+        <!-- GitHub Stats -->
+        <section class="stats">
+            <h2>📊 GitHub İstatistikleri</h2>
+            <img src="https://github-readme-stats.vercel.app/api?username=rabiaeken&show_icons=true&theme=tokyonight&hide_border=true&bg_color=161b22" alt="Stats">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rabiaeken&layout=compact&theme=tokyonight&hide_border=true&bg_color=161b22" alt="Langs">
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 Rabia Ceyda Eken. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>

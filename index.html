@@ -1,167 +1,384 @@
-<!-- ABOUT -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rabia Ceyda Eken | Portfolio</title>
 
-<section>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <h2>👩‍💻 About Me</h2>
+    <style>
 
-    <p>
-        I am a Computer Engineering student at Istanbul Bilgi University with
-        strong interests in Artificial Intelligence, Data Science and Software
-        Development.
-    </p>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --primary: #4285f4;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --gradient: linear-gradient(135deg, #050816 0%, #0d1117 50%, #111827 100%);
+        }
 
-    <br>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <p>
-        I develop projects using Python for data analysis, machine learning and
-        automation systems while also improving my skills in cloud technologies
-        and modern software development.
-    </p>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
 
-    <br>
+        header {
+            min-height: 100vh;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
 
-    <p>
-        I am also interested in embedded systems and hardware-based projects,
-        including Arduino applications and sensor-integrated systems.
-    </p>
+        .hero {
+            max-width: 850px;
+        }
 
-</section>
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+        }
 
-<!-- EXPERIENCE -->
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
 
-<section>
+        .typewriter {
+            font-family: 'Fira Code', monospace;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
 
-    <h2>🚀 Experience & Roles</h2>
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-    <div class="grid">
+        .socials a {
+            padding: 12px 22px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
-        <div class="card">
+        .linkedin {
+            background: #0077b5;
+        }
 
-            <h3>Software Persona (TNC Group)</h3>
+        .github {
+            background: #161b22;
+            border: 1px solid #30363d;
+        }
 
-            <span class="date">
-                May 2026 – June 2026
-            </span>
+        .mail {
+            background: #d14836;
+        }
 
-            <p>
-                Incoming Software Engineering Intern gaining experience in
-                real-world software development processes.
-            </p>
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 90px 20px;
+        }
 
+        section {
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 35px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #21262d;
+            border: 1px solid var(--border-color);
+            padding: 10px 16px;
+            border-radius: 999px;
+        }
+
+        .github-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .github-stats img,
+        .activity {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .activity {
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="hero">
+
+        <h1>Rabia Ceyda Eken</h1>
+
+        <div class="subtitle">
+            Computer Engineering Student • AI • Data Science
         </div>
 
-        <div class="card">
-
-            <h3>Bilgi AI Club</h3>
-
-            <span class="date">
-                2025 – Present
-            </span>
-
-            <p>
-                Sponsorship & Partnerships Team Member supporting collaborations,
-                communication and event organization.
-            </p>
-
+        <div class="typewriter">
+            Building AI-powered and data-driven projects.
         </div>
 
-        <div class="card">
+        <div class="socials">
 
-            <h3>Beyoğlu Youth Center</h3>
+            <a class="linkedin"
+               href="https://linkedin.com/in/rabia-eken-7a0a182a0"
+               target="_blank">
+               LinkedIn
+            </a>
 
-            <span class="date">
-                2024 – Present
-            </span>
+            <a class="github"
+               href="https://github.com/rabiaeken"
+               target="_blank">
+               GitHub
+            </a>
 
-            <p>
-                Volunteer Youth Leader contributing to community and youth
-                activities.
-            </p>
+            <a class="mail"
+               href="mailto:rabiaeken987@gmail.com">
+               Email
+            </a>
 
         </div>
 
     </div>
 
-</section>
+</header>
 
-<!-- PROJECTS -->
+<div class="container">
 
-<section>
+    <section>
 
-    <h2>🏗️ Projects</h2>
+        <h2>👩‍💻 About Me</h2>
 
-    <div class="grid">
+        <p>
+            I am a Computer Engineering student at Istanbul Bilgi University with
+            strong interests in Artificial Intelligence, Data Science and Software Development.
+        </p>
 
-        <div class="card">
+        <br>
 
-            <h3>AWS Serverless Data Pipeline</h3>
+        <p>
+            I develop projects using Python for data analysis, machine learning
+            and automation systems while improving my skills in cloud technologies
+            and modern software development.
+        </p>
 
-            <p>
-                Built a serverless data processing workflow using AWS Lambda,
-                S3 and DynamoDB.
-            </p>
+        <br>
+
+        <p>
+            I am also interested in embedded systems and hardware-based projects,
+            including Arduino applications and sensor-integrated systems.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>🚀 Experience & Roles</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>Software Persona (TNC Group)</h3>
+
+                <span class="date">
+                    May 2026 – June 2026
+                </span>
+
+                <p>
+                    Incoming Software Engineering Intern gaining experience in
+                    real-world software development.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Bilgi AI Club</h3>
+
+                <span class="date">
+                    2025 – Present
+                </span>
+
+                <p>
+                    Sponsorship & Partnerships Team Member supporting collaborations
+                    and event organization.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Beyoğlu Youth Center</h3>
+
+                <span class="date">
+                    2024 – Present
+                </span>
+
+                <p>
+                    Volunteer Youth Leader contributing to community activities.
+                </p>
+
+            </div>
 
         </div>
 
-        <div class="card">
+    </section>
 
-            <h3>Medical Insurance Prediction</h3>
+    <section>
 
-            <p>
-                Developed a machine learning project involving data analysis,
-                feature engineering and predictive modeling with Python.
-            </p>
+        <h2>🏗️ Projects</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>AWS Serverless Data Pipeline</h3>
+
+                <p>
+                    Built a serverless data processing workflow using AWS Lambda,
+                    S3 and DynamoDB.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Medical Insurance Prediction</h3>
+
+                <p>
+                    Developed a machine learning project involving data analysis
+                    and predictive modeling with Python.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Teknofest Immuno-Oncology 3T</h3>
+
+                <p>
+                    Contributed to an AI-based healthcare project that advanced
+                    to the semi-final stage.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Arduino Smart System Project</h3>
+
+                <p>
+                    Developed Arduino-based automation and sensor-integrated systems.
+                </p>
+
+            </div>
 
         </div>
 
-        <div class="card">
+    </section>
 
-            <h3>Teknofest Immuno-Oncology 3T</h3>
+    <section>
 
-            <p>
-                Contributed to an AI-based healthcare project that advanced to
-                the semi-final stage.
-            </p>
+        <h2>🛠️ Technical Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">Python</div>
+            <div class="skill">Java</div>
+            <div class="skill">C++</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Pandas</div>
+            <div class="skill">NumPy</div>
+            <div class="skill">Machine Learning</div>
+            <div class="skill">Data Science</div>
+            <div class="skill">AWS</div>
+            <div class="skill">Arduino</div>
+            <div class="skill">Linux</div>
 
         </div>
 
-        <div class="card">
+    </section>
 
-            <h3>Arduino Smart System Project</h3>
+</div>
 
-            <p>
-                Developed Arduino-based automation and sensor-integrated system
-                projects focused on practical hardware applications.
-            </p>
+<footer>
+    © 2026 Rabia Ceyda Eken • Portfolio Website
+</footer>
 
-        </div>
-
-    </div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section>
-
-    <h2>🛠️ Technical Skills</h2>
-
-    <div class="skills">
-
-        <div class="skill">Python</div>
-        <div class="skill">Java</div>
-        <div class="skill">C++</div>
-        <div class="skill">SQL</div>
-        <div class="skill">Pandas</div>
-        <div class="skill">NumPy</div>
-        <div class="skill">Scikit-Learn</div>
-        <div class="skill">Machine Learning</div>
-        <div class="skill">Data Science</div>
-        <div class="skill">AWS</div>
-        <div class="skill">Arduino</div>
-        <div class="skill">Embedded Systems</div>
-        <div class="skill">Linux</div>
-
-    </div>
-
-</section>
+</body>
+</html>

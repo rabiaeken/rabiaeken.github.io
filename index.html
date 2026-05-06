@@ -1,315 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rabia Ceyda Eken | Engineering Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0d1117;
-            --container-bg: #161b22;
-            --accent-blue: #4285F4;
-            --text-primary: #ffffff;
-            --text-secondary: #8b949e;
-            --border-color: #30363d;
-            --gradient: linear-gradient(135deg, #02030c 0%, #12131b 100%);
-        }
+<!-- ABOUT -->
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<section>
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+    <h2>👩‍💻 About Me</h2>
 
-        header {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: var(--gradient);
-            position: relative;
-            padding: 0 20px;
-        }
+    <p>
+        I am a Computer Engineering student at Istanbul Bilgi University with
+        strong interests in Artificial Intelligence, Data Science and Software
+        Development.
+    </p>
 
-        header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -1px;
-        }
+    <br>
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
+    <p>
+        I develop projects using Python for data analysis, machine learning and
+        automation systems while also improving my skills in cloud technologies
+        and modern software development.
+    </p>
 
-        .typewriter {
-            font-family: 'Fira Code', monospace;
-            font-size: 1.1rem;
-            color: var(--accent-blue);
-            margin-bottom: 2.5rem;
-        }
+    <br>
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-        }
+    <p>
+        I am also interested in embedded systems and hardware-based projects,
+        including Arduino applications and sensor-integrated systems.
+    </p>
 
-        .social-links a {
-            padding: 10px 20px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: transform 0.3s ease;
-        }
+</section>
 
-        .linkedin { background: #0077B5; color: white; }
-        .github { background: #181717; color: white; border: 1px solid #30363d; }
-        .email { background: #D14836; color: white; }
+<!-- EXPERIENCE -->
 
-        .social-links a:hover {
-            transform: translateY(-3px);
-        }
+<section>
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
+    <h2>🚀 Experience & Roles</h2>
 
-        section {
-            margin-bottom: 100px;
-        }
+    <div class="grid">
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-        }
+        <div class="card">
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+            <h3>Software Persona (TNC Group)</h3>
 
-        .card {
-            background: var(--container-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 25px;
-            transition: border-color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
+            <span class="date">
+                May 2026 – June 2026
+            </span>
 
-        .card:hover {
-            border-color: var(--accent-blue);
-        }
-
-        .card h3 {
-            margin-bottom: 10px;
-            color: var(--accent-blue);
-            font-size: 1.2rem;
-        }
-
-        .date {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-            display: block;
-            font-family: 'Fira Code', monospace;
-        }
-
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill-badge {
-            background: #21262d;
-            border: 1px solid var(--border-color);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-family: 'Fira Code', monospace;
-            color: #c9d1d9;
-        }
-
-        .card ul {
-            list-style-type: none;
-            margin-top: 10px;
-        }
-
-        .card ul li {
-            position: relative;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-        }
-
-        .card ul li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--accent-blue);
-        }
-
-        .stats {
-            text-align: center;
-        }
-
-        .stats img {
-            max-width: 100%;
-            margin-top: 20px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.5rem; }
-            .grid { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Rabia Ceyda Eken</h1>
-        <div class="subtitle">Computer Engineering Student | AI & Data Engineer</div>
-        <div class="typewriter">Architecting Cloud Solutions & Applied Security Research</div>
-        <div class="social-links">
-            <a href="https://linkedin.com/in/rabia-eken-7a0a182a0" class="linkedin">LinkedIn</a>
-            <a href="https://github.com/rabiaeken" class="github">GitHub</a>
-            <a href="mailto:rabiaeken987@gmail.com" class="email">Email</a>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- Engineering Profile -->
-        <section id="about">
-            <h2>⚙️ Engineering Profile</h2>
             <p>
-                I am a Computer Engineering student at Istanbul Bilgi University, specializing in <b>Artificial Intelligence, Data Engineering, and Cloud Architecture</b>. My engineering philosophy centers on building scalable, efficient, and secure systems. Whether I am architecting event-driven serverless pipelines on AWS, developing robust predictive models, or conducting vulnerability assessments in simulated security environments, I focus on algorithmic efficiency and clean system design.
+                Incoming Software Engineering Intern gaining experience in
+                real-world software development processes.
             </p>
-            <p style="margin-top: 15px; color: var(--text-secondary); font-family: 'Fira Code', monospace; font-size: 0.9rem;">
-                > B.Sc. Computer Engineering @ Istanbul Bilgi University (2023 - Present)
+
+        </div>
+
+        <div class="card">
+
+            <h3>Bilgi AI Club</h3>
+
+            <span class="date">
+                2025 – Present
+            </span>
+
+            <p>
+                Sponsorship & Partnerships Team Member supporting collaborations,
+                communication and event organization.
             </p>
-            <p style="margin-top: 5px; color: var(--text-secondary); font-family: 'Fira Code', monospace; font-size: 0.9rem;">
-                > Core Competencies: Machine Learning Pipelines, Serverless Infrastructure, Data Analytics, Applied Security Research
+
+        </div>
+
+        <div class="card">
+
+            <h3>Beyoğlu Youth Center</h3>
+
+            <span class="date">
+                2024 – Present
+            </span>
+
+            <p>
+                Volunteer Youth Leader contributing to community and youth
+                activities.
             </p>
-        </section>
 
-        <!-- Experience & Projects -->
-        <section id="experience">
-            <h2>🚀 Experience & Engineering Projects</h2>
-            
-            <h3 style="margin-bottom: 20px; color: var(--text-secondary); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">💼 Professional Experience & Community</h3>
-            <div class="grid" style="margin-bottom: 40px;">
-                <div class="card">
-                    <h3>Software Persona (TNC Group)</h3>
-                    <span class="date">May 2026 - Jun 2026</span>
-                    <p><b>Incoming Software Engineering Intern</b></p>
-                    <ul>
-                        <li>Focusing on real-world software development and scalable system design.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Bilgi AI Club</h3>
-                    <span class="date">2025 - Present</span>
-                    <p><b>Sponsorship & Partnerships Team</b></p>
-                    <ul>
-                        <li>Managing corporate outreach, strategic partnerships, and industry networking.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Beyoğlu Gençlik Merkezi</h3>
-                    <span class="date">2024 - Present</span>
-                    <p><b>Volunteer Youth Leader</b></p>
-                    <ul>
-                        <li>Leading youth engagement initiatives and community-driven projects.</li>
-                    </ul>
-                </div>
-            </div>
+        </div>
 
-            <h3 style="margin-bottom: 20px; color: var(--text-secondary); border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">🏗️ Featured Projects</h3>
-            <div class="grid">
-                <div class="card">
-                    <h3>AWS Serverless Data Pipeline</h3>
-                    <p>Engineered an automated workflow using S3 triggers, Lambda functions, and DynamoDB for event-driven processing.</p>
-                </div>
-                <div class="card">
-                    <h3>Medical Insurance Predictive Modeling</h3>
-                    <p>Developed an end-to-end regression pipeline involving Exploratory Data Analysis (EDA), feature engineering, and model training using Python.</p>
-                </div>
-                <div class="card">
-                    <h3>Immuno-Oncology 3T (Teknofest)</h3>
-                    <p>Contributed to an AI-driven medical analysis workflow. Advanced to the Semi-Final stage by optimizing algorithmic efficiency.</p>
-                </div>
-                <div class="card">
-                    <h3>Algorithmic Chess Engine</h3>
-                    <p>Programmed a Python-based analytical chess coach integrating the Stockfish analyzer with custom-tiered difficulty bots.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Technical Arsenal -->
-        <section id="skills">
-            <h2>🛠️ Technical Arsenal</h2>
-            <div class="skills-container">
-                <span class="skill-badge">Python</span>
-                <span class="skill-badge">Java</span>
-                <span class="skill-badge">C++</span>
-                <span class="skill-badge">SQL</span>
-                <span class="skill-badge">Pandas</span>
-                <span class="skill-badge">NumPy</span>
-                <span class="skill-badge">Scikit-Learn</span>
-                <span class="skill-badge">AWS (S3, Lambda)</span>
-                <span class="skill-badge">Digital Forensics</span>
-                <span class="skill-badge">OSINT</span>
-            </div>
-        </section>
-
-        <!-- GitHub Analytics -->
-        <section class="stats">
-            <h2>📊 GitHub Analytics</h2>
-            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                <img src="https://github-readme-stats.vercel.app/api?username=rabiaeken&show_icons=true&theme=tokyonight&hide_border=true&bg_color=161b22" alt="GitHub Stats">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rabiaeken&layout=compact&theme=tokyonight&hide_border=true&bg_color=161b22" alt="Top Languages">
-            </div>
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=rabiaeken&theme=tokyo-night&hide_border=true&bg_color=161b22&color=70a5fd&line=bf91f3&point=38bdae" alt="Activity Graph" style="width: 100%; max-width: 900px;">
-        </section>
     </div>
 
-    <footer>
-        <p>© 2026 Rabia Ceyda Eken. All rights reserved.</p>
-    </footer>
+</section>
 
-</body>
-</html>
+<!-- PROJECTS -->
+
+<section>
+
+    <h2>🏗️ Projects</h2>
+
+    <div class="grid">
+
+        <div class="card">
+
+            <h3>AWS Serverless Data Pipeline</h3>
+
+            <p>
+                Built a serverless data processing workflow using AWS Lambda,
+                S3 and DynamoDB.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Medical Insurance Prediction</h3>
+
+            <p>
+                Developed a machine learning project involving data analysis,
+                feature engineering and predictive modeling with Python.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Teknofest Immuno-Oncology 3T</h3>
+
+            <p>
+                Contributed to an AI-based healthcare project that advanced to
+                the semi-final stage.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Arduino Smart System Project</h3>
+
+            <p>
+                Developed Arduino-based automation and sensor-integrated system
+                projects focused on practical hardware applications.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section>
+
+    <h2>🛠️ Technical Skills</h2>
+
+    <div class="skills">
+
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">C++</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Pandas</div>
+        <div class="skill">NumPy</div>
+        <div class="skill">Scikit-Learn</div>
+        <div class="skill">Machine Learning</div>
+        <div class="skill">Data Science</div>
+        <div class="skill">AWS</div>
+        <div class="skill">Arduino</div>
+        <div class="skill">Embedded Systems</div>
+        <div class="skill">Linux</div>
+
+    </div>
+
+</section>

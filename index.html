@@ -3,719 +3,706 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rabia Ceyda Eken | Portfolio</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-
-        :root {
-            --bg-color: #0d1117;
-            --card-bg: rgba(22, 27, 34, 0.75);
-            --border-color: rgba(255,255,255,0.08);
-            --primary: #4285f4;
-            --secondary: #7c4dff;
-            --text-primary: #f0f6fc;
-            --text-secondary: #9ba3af;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background:
-                radial-gradient(circle at top left, rgba(66,133,244,0.10), transparent 25%),
-                radial-gradient(circle at bottom right, rgba(124,77,255,0.10), transparent 30%),
-                #0d1117;
-            color: var(--text-primary);
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* NAVBAR */
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px 45px;
-            background: rgba(13,17,23,0.70);
-            backdrop-filter: blur(14px);
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 999;
-        }
-
-        .logo {
-            font-size: 1.15rem;
-            font-weight: 700;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            transition: 0.25s;
-            font-size: 0.95rem;
-        }
-
-        .nav-links a:hover {
-            color: white;
-        }
-
-        /* HERO */
-
-        header {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 140px 20px 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .aurora {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(90px);
-            opacity: 0.20;
-            animation: float 12s infinite ease-in-out;
-        }
-
-        .aurora1 {
-            width: 420px;
-            height: 420px;
-            background: #4285f4;
-            top: -120px;
-            left: -100px;
-        }
-
-        .aurora2 {
-            width: 350px;
-            height: 350px;
-            background: #7c4dff;
-            bottom: -120px;
-            right: -80px;
-            animation-delay: 3s;
-        }
-
-        .aurora3 {
-            width: 250px;
-            height: 250px;
-            background: #00c2ff;
-            top: 40%;
-            left: 45%;
-            animation-delay: 6s;
-        }
-
-        @keyframes float {
-
-            0% {
-                transform: translateY(0px) translateX(0px);
-            }
-
-            50% {
-                transform: translateY(-30px) translateX(25px);
-            }
-
-            100% {
-                transform: translateY(0px) translateX(0px);
-            }
-
-        }
-
-        .hero-container {
-            position: relative;
-            z-index: 5;
-            max-width: 1200px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 80px;
-            flex-wrap: wrap;
-        }
-
-        .hero-left {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile-img {
-            width: 280px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid rgba(66,133,244,0.70);
-            box-shadow:
-                0 0 40px rgba(66,133,244,0.30),
-                0 0 90px rgba(124,77,255,0.20);
-            transition: 0.35s;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.03);
-        }
-
-        .hero-right {
-            max-width: 620px;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            padding: 9px 18px;
-            border-radius: 999px;
-            background: rgba(66,133,244,0.12);
-            border: 1px solid rgba(66,133,244,0.25);
-            color: #8ab4ff;
-            margin-bottom: 24px;
-            font-size: 0.92rem;
-        }
-
-        .hero-right h1 {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-
-        .subtitle {
-            color: var(--text-secondary);
-            font-size: 1.25rem;
-            margin-bottom: 25px;
-        }
-
-        .hero-description {
-            color: #d0d7de;
-            font-size: 1.05rem;
-            max-width: 580px;
-            margin-bottom: 35px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .hero-buttons a {
-            padding: 14px 24px;
-            border-radius: 12px;
-            color: white;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-        .hero-buttons a:hover {
-            transform: translateY(-5px);
-        }
-
-        .linkedin {
-            background: #0077b5;
-        }
-
-        .github {
-            background: #161b22;
-            border: 1px solid #30363d;
-        }
-
-        .cv-button {
-            background: linear-gradient(135deg, #4285f4, #7c4dff);
-        }
-
-        /* MAIN */
-
-        .container {
-            max-width: 1150px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 100px;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 35px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            padding-bottom: 12px;
-        }
-
-        p {
-            color: #d0d7de;
-        }
-
-        /* CARDS */
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            backdrop-filter: blur(14px);
-            border: 1px solid var(--border-color);
-            border-radius: 22px;
-            padding: 28px;
-            transition: 0.35s;
-        }
-
-        .card:hover {
-            transform: translateY(-7px);
-            border-color: rgba(66,133,244,0.35);
-            box-shadow:
-                0 0 30px rgba(66,133,244,0.10),
-                0 0 60px rgba(124,77,255,0.08);
-        }
-
-        .card h3 {
-            color: #8ab4ff;
-            margin-bottom: 12px;
-        }
-
-        .date {
-            display: block;
-            margin-bottom: 15px;
-            color: var(--text-secondary);
-            font-size: 0.92rem;
-        }
-
-        /* SKILLS */
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            padding: 11px 18px;
-            border-radius: 999px;
-            transition: 0.25s;
-        }
-
-        .skill:hover {
-            transform: translateY(-3px);
-            border-color: rgba(66,133,244,0.35);
-        }
-
-        /* CONTACT */
-
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .contact-links a {
-            color: #d0d7de;
-            transition: 0.25s;
-        }
-
-        .contact-links a:hover {
-            color: #8ab4ff;
-        }
-
-        /* FOOTER */
-
-        footer {
-            text-align: center;
-            padding: 35px;
-            color: var(--text-secondary);
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 900px) {
-
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-                gap: 45px;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .profile-img {
-                width: 220px;
-                height: 220px;
-            }
-
-            .navbar {
-                flex-direction: column;
-                gap: 15px;
-                padding: 20px;
-            }
-
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 18px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rabia Ceyda Eken | Portfolio</title>
+
+<meta name="description"
+content="Rabia Ceyda Eken - Computer Engineering Student focused on Artificial Intelligence, Data Science, Machine Learning and Software Development.">
+
+<meta name="keywords"
+content="Rabia Ceyda Eken, AI, Data Science, Machine Learning, Python, Software Development, Computer Engineering">
+
+<meta name="author" content="Rabia Ceyda Eken">
+
+<meta property="og:title" content="Rabia Ceyda Eken | Portfolio">
+<meta property="og:description" content="AI, Data Science and Software Development Portfolio">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* BACKGROUND */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top left, rgba(66,133,244,0.15), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(124,77,255,0.12), transparent 35%),
+    linear-gradient(to bottom,#050816,#0b1023);
+    z-index:-3;
+}
+
+/* NETWORK EFFECT */
+
+.network{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    overflow:hidden;
+}
+
+.line{
+    position:absolute;
+    background:rgba(66,133,244,0.12);
+    transform-origin:left center;
+}
+
+.dot{
+    position:absolute;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:#38bdf8;
+    box-shadow:0 0 15px #38bdf8;
+}
+
+/* NAVBAR */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:22px 60px;
+    background:rgba(5,8,22,0.75);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:999;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:800;
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+}
+
+.nav-links a{
+    color:#9ca3af;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+/* HERO */
+
+header{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:150px 30px 100px;
+}
+
+.hero{
+    width:100%;
+    max-width:1250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:90px;
+    flex-wrap:wrap;
+}
+
+.hero-left{
+    position:relative;
+}
+
+.profile-glow{
+    position:absolute;
+    inset:-20px;
+    background:
+    radial-gradient(circle, rgba(66,133,244,0.30), transparent 70%);
+    filter:blur(30px);
+    z-index:-1;
+}
+
+.profile-img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center top;
+    border:4px solid rgba(66,133,244,0.7);
+    box-shadow:
+    0 0 50px rgba(66,133,244,0.3),
+    0 0 100px rgba(124,77,255,0.2);
+    transition:0.35s;
+}
+
+.profile-img:hover{
+    transform:scale(1.03);
+}
+
+.hero-right{
+    max-width:650px;
+}
+
+.badge{
+    display:inline-block;
+    padding:10px 20px;
+    border-radius:999px;
+    background:rgba(66,133,244,0.10);
+    border:1px solid rgba(66,133,244,0.25);
+    color:#8ab4ff;
+    margin-bottom:24px;
+}
+
+.hero-right h1{
+    font-size:clamp(3rem,8vw,6rem);
+    line-height:0.95;
+    margin-bottom:25px;
+    font-weight:800;
+}
+
+.subtitle{
+    font-size:1.4rem;
+    color:#9ca3af;
+    margin-bottom:30px;
+}
+
+.description{
+    font-size:1.1rem;
+    color:#d1d5db;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.buttons a{
+    padding:15px 28px;
+    border-radius:14px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.buttons a:hover{
+    transform:translateY(-5px);
+}
+
+.linkedin{
+    background:#0077b5;
+    color:white;
+}
+
+.github{
+    background:#111827;
+    color:white;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.cv{
+    background:linear-gradient(135deg,#4285f4,#7c4dff);
+    color:white;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+section{
+    margin-bottom:110px;
+}
+
+h2{
+    font-size:2.2rem;
+    margin-bottom:35px;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    padding-bottom:14px;
+}
+
+/* CARDS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:28px;
+}
+
+.card{
+    background:rgba(17,24,39,0.6);
+    backdrop-filter:blur(16px);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:24px;
+    padding:30px;
+    transition:0.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(66,133,244,0.35);
+    box-shadow:
+    0 0 35px rgba(66,133,244,0.15);
+}
+
+.card h3{
+    color:#8ab4ff;
+    margin-bottom:14px;
+}
+
+.date{
+    display:block;
+    color:#9ca3af;
+    margin-bottom:18px;
+}
+
+.card p{
+    color:#d1d5db;
+    line-height:1.7;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+}
+
+.skill{
+    padding:12px 20px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:translateY(-4px);
+    border-color:rgba(66,133,244,0.35);
+}
+
+/* CONTACT */
+
+.contact-links{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.contact-links a{
+    color:#d1d5db;
+    text-decoration:none;
+}
+
+.contact-links a:hover{
+    color:#8ab4ff;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#9ca3af;
+    border-top:1px solid rgba(255,255,255,0.06);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    gap:50px;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+.navbar{
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+}
+
+.nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.profile-img{
+    width:240px;
+    height:240px;
+}
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+<div class="network">
 
-    <nav class="navbar">
+<div class="dot" style="top:20%; left:12%;"></div>
+<div class="dot" style="top:30%; left:25%;"></div>
+<div class="dot" style="top:42%; left:18%;"></div>
+<div class="dot" style="top:35%; left:40%;"></div>
+<div class="dot" style="top:60%; left:70%;"></div>
+<div class="dot" style="top:25%; left:75%;"></div>
 
-        <div class="logo">
-            Rabia Eken
-        </div>
+<div class="line" style="width:170px;height:1px;top:22%;left:12%;transform:rotate(28deg);"></div>
 
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </div>
+<div class="line" style="width:120px;height:1px;top:32%;left:18%;transform:rotate(-20deg);"></div>
 
-    </nav>
+<div class="line" style="width:180px;height:1px;top:35%;left:25%;transform:rotate(12deg);"></div>
 
-    <!-- HERO -->
+<div class="line" style="width:250px;height:1px;top:37%;left:40%;transform:rotate(15deg);"></div>
 
-    <header>
+</div>
 
-        <div class="aurora aurora1"></div>
-        <div class="aurora aurora2"></div>
-        <div class="aurora aurora3"></div>
+<nav class="navbar">
 
-        <div class="hero-container">
+<div class="logo">
+Rabia Eken
+</div>
 
-            <div class="hero-left">
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
 
-                <img src="profile.jpg" class="profile-img">
+</nav>
 
-            </div>
+<header>
 
-            <div class="hero-right">
+<div class="hero">
 
-                <div class="hero-badge">
-                    AI • Data Science • Software Development
-                </div>
+<div class="hero-left">
 
-                <h1>
-                    Rabia Ceyda Eken
-                </h1>
+<div class="profile-glow"></div>
 
-                <div class="subtitle">
-                    Computer Engineering Student
-                </div>
+<img src="./profile.jpg"
+alt="Rabia Ceyda Eken"
+class="profile-img">
 
-                <p class="hero-description">
+</div>
 
-                    Building intelligent systems with Python,
-                    machine learning and modern software technologies.
+<div class="hero-right">
 
-                </p>
+<div class="badge">
+AI • Data Science • Software Development
+</div>
 
-                <div class="hero-buttons">
+<h1>
+Rabia Ceyda<br>
+Eken
+</h1>
 
-                    <a class="linkedin"
-                       href="https://linkedin.com/in/rabia-eken-7a0a182a0"
-                       target="_blank">
+<div class="subtitle">
+Computer Engineering Student
+</div>
 
-                        LinkedIn
+<div class="description">
 
-                    </a>
+Building intelligent systems with Python,
+machine learning and modern software technologies.
 
-                    <a class="github"
-                       href="https://github.com/rabiaeken"
-                       target="_blank">
+</div>
 
-                        GitHub
+<div class="buttons">
 
-                    </a>
+<a class="linkedin"
+href="https://linkedin.com/in/rabia-eken-7a0a182a0"
+target="_blank">
 
-                    <a class="cv-button"
-                       href="cv.pdf"
-                       target="_blank">
+LinkedIn
 
-                        Download CV
+</a>
 
-                    </a>
+<a class="github"
+href="https://github.com/rabiaeken"
+target="_blank">
 
-                </div>
+GitHub
 
-            </div>
+</a>
 
-        </div>
+<a class="cv"
+href="./cv.pdf"
+target="_blank">
 
-    </header>
+Download CV
 
-    <!-- MAIN -->
+</a>
 
-    <div class="container">
+</div>
 
-        <!-- ABOUT -->
+</div>
 
-        <section id="about">
+</div>
 
-            <h2>👩‍💻 About Me</h2>
+</header>
 
-            <p>
-                I am a Computer Engineering student at Istanbul Bilgi University
-                with strong interests in Artificial Intelligence, Data Science
-                and Software Development.
-            </p>
+<div class="container">
 
-            <br>
+<section id="about">
 
-            <p>
-                I develop projects using Python for data analysis, machine learning
-                and automation systems while improving my skills in cloud technologies
-                and modern software development.
-            </p>
+<h2>👩‍💻 About Me</h2>
 
-            <br>
+<p style="color:#d1d5db; line-height:1.9;">
 
-            <p>
-                I am also interested in embedded systems and hardware-based projects,
-                including Arduino applications and sensor-integrated systems.
-            </p>
+I am a Computer Engineering student at Istanbul Bilgi University
+with strong interests in Artificial Intelligence,
+Data Science and Software Development.
 
-        </section>
+<br><br>
 
-        <!-- EXPERIENCE -->
+I develop projects using Python for data analysis,
+machine learning and automation systems while improving
+my skills in cloud technologies and modern software development.
 
-        <section id="experience">
+<br><br>
 
-            <h2>🚀 Experience & Roles</h2>
+I am also interested in embedded systems,
+including Arduino applications and sensor-integrated systems.
 
-            <div class="grid">
+</p>
 
-                <div class="card">
+</section>
 
-                    <h3>Software Persona (TNC Group)</h3>
+<section id="experience">
 
-                    <span class="date">
-                        May 2026 – June 2026
-                    </span>
+<h2>🚀 Experience & Roles</h2>
 
-                    <p>
-                        Incoming Software Engineering Intern gaining experience
-                        in real-world software development.
-                    </p>
+<div class="grid">
 
-                </div>
+<div class="card">
 
-                <div class="card">
+<h3>Software Persona (TNC Group)</h3>
 
-                    <h3>Bilgi AI Club</h3>
+<span class="date">
+May 2026 – June 2026
+</span>
 
-                    <span class="date">
-                        2025 – Present
-                    </span>
+<p>
+Incoming Software Engineering Intern gaining experience
+in real-world software development.
+</p>
 
-                    <p>
-                        Sponsorship & Partnerships Team Member supporting
-                        collaborations and event organization.
-                    </p>
+</div>
 
-                </div>
+<div class="card">
 
-                <div class="card">
+<h3>Bilgi AI Club</h3>
 
-                    <h3>Beyoğlu Youth Center</h3>
+<span class="date">
+2025 – Present
+</span>
 
-                    <span class="date">
-                        2024 – Present
-                    </span>
+<p>
+Sponsorship & Partnerships Team Member supporting
+collaborations and event organization.
+</p>
 
-                    <p>
-                        Volunteer Youth Leader contributing to community activities.
-                    </p>
+</div>
 
-                </div>
+<div class="card">
 
-            </div>
+<h3>Beyoğlu Youth Center</h3>
 
-        </section>
+<span class="date">
+2024 – Present
+</span>
 
-        <!-- PROJECTS -->
+<p>
+Volunteer Youth Leader contributing to community activities.
+</p>
 
-        <section id="projects">
+</div>
 
-            <h2>🏗️ Projects</h2>
+</div>
 
-            <div class="grid">
+</section>
 
-                <div class="card">
+<section id="projects">
 
-                    <h3>AWS Serverless Data Pipeline</h3>
+<h2>🏗️ Projects</h2>
 
-                    <p>
-                        Built a serverless data processing workflow using AWS Lambda,
-                        S3 and DynamoDB.
-                    </p>
+<div class="grid">
 
-                </div>
+<div class="card">
 
-                <div class="card">
+<h3>AWS Serverless Data Pipeline</h3>
 
-                    <h3>Medical Insurance Prediction</h3>
+<p>
+Built a serverless data processing workflow using AWS Lambda,
+S3 and DynamoDB.
+</p>
 
-                    <p>
-                        Developed a machine learning project involving data analysis
-                        and predictive modeling with Python.
-                    </p>
+</div>
 
-                </div>
+<div class="card">
 
-                <div class="card">
+<h3>Medical Insurance Prediction</h3>
 
-                    <h3>Teknofest Immuno-Oncology 3T</h3>
+<p>
+Developed a machine learning project involving data analysis
+and predictive modeling with Python.
+</p>
 
-                    <p>
-                        Contributed to an AI-based healthcare project that advanced
-                        to the semi-final stage.
-                    </p>
+</div>
 
-                </div>
+<div class="card">
 
-                <div class="card">
+<h3>Teknofest Immuno-Oncology 3T</h3>
 
-                    <h3>Arduino Smart System Project</h3>
+<p>
+Contributed to an AI-based healthcare project that advanced
+to the semi-final stage.
+</p>
 
-                    <p>
-                        Developed Arduino-based automation and sensor-integrated systems.
-                    </p>
+</div>
 
-                </div>
+<div class="card">
 
-            </div>
+<h3>Arduino Smart System Project</h3>
 
-        </section>
+<p>
+Developed Arduino-based automation and sensor-integrated systems.
+</p>
 
-        <!-- SKILLS -->
+</div>
 
-        <section id="skills">
+</div>
 
-            <h2>🛠️ Technical Skills</h2>
+</section>
 
-            <div class="skills">
+<section id="skills">
 
-                <div class="skill">Python</div>
-                <div class="skill">Java</div>
-                <div class="skill">C++</div>
-                <div class="skill">SQL</div>
-                <div class="skill">Pandas</div>
-                <div class="skill">NumPy</div>
-                <div class="skill">Machine Learning</div>
-                <div class="skill">Data Science</div>
-                <div class="skill">AWS</div>
-                <div class="skill">Arduino</div>
-                <div class="skill">Linux</div>
+<h2>🛠️ Technical Skills</h2>
 
-            </div>
+<div class="skills">
 
-        </section>
+<div class="skill">Python</div>
+<div class="skill">Java</div>
+<div class="skill">C++</div>
+<div class="skill">SQL</div>
+<div class="skill">Pandas</div>
+<div class="skill">NumPy</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">Data Science</div>
+<div class="skill">AWS</div>
+<div class="skill">Arduino</div>
+<div class="skill">Linux</div>
 
-        <!-- CONTACT -->
+</div>
 
-        <section id="contact">
+</section>
 
-            <h2>📬 Contact</h2>
+<section id="contact">
 
-            <div class="grid">
+<h2>📬 Contact</h2>
 
-                <div class="card">
+<div class="grid">
 
-                    <h3>Email</h3>
+<div class="card">
 
-                    <div class="contact-links">
+<h3>Email</h3>
 
-                        <a href="mailto:rabiaeken987@gmail.com">
-                            rabiaeken987@gmail.com
-                        </a>
+<div class="contact-links">
 
-                    </div>
+<a href="mailto:rabiaeken987@gmail.com">
+rabiaeken987@gmail.com
+</a>
 
-                </div>
+</div>
 
-                <div class="card">
+</div>
 
-                    <h3>LinkedIn</h3>
+<div class="card">
 
-                    <div class="contact-links">
+<h3>LinkedIn</h3>
 
-                        <a href="https://linkedin.com/in/rabia-eken-7a0a182a0"
-                           target="_blank">
+<div class="contact-links">
 
-                            linkedin.com/in/rabia-eken-7a0a182a0
+<a href="https://linkedin.com/in/rabia-eken-7a0a182a0"
+target="_blank">
 
-                        </a>
+linkedin.com/in/rabia-eken-7a0a182a0
 
-                    </div>
+</a>
 
-                </div>
+</div>
 
-                <div class="card">
+</div>
 
-                    <h3>GitHub</h3>
+<div class="card">
 
-                    <div class="contact-links">
+<h3>GitHub</h3>
 
-                        <a href="https://github.com/rabiaeken"
-                           target="_blank">
+<div class="contact-links">
 
-                            github.com/rabiaeken
+<a href="https://github.com/rabiaeken"
+target="_blank">
 
-                        </a>
+github.com/rabiaeken
 
-                    </div>
+</a>
 
-                </div>
+</div>
 
-            </div>
+</div>
 
-        </section>
+</div>
 
-    </div>
+</section>
 
-    <!-- FOOTER -->
+</div>
 
-    <footer>
+<footer>
 
-        © 2026 Rabia Ceyda Eken • Portfolio Website
+© 2026 Rabia Ceyda Eken • Portfolio Website
 
-    </footer>
+</footer>
 
 </body>
 

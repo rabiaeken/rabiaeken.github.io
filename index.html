@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Rabia Ceyda Eken | Portfolio</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
@@ -25,12 +28,58 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg-color);
             color: var(--text-primary);
             line-height: 1.7;
         }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 18px 40px;
+            background: rgba(13, 17, 23, 0.88);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            transition: 0.25s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO */
 
         header {
             min-height: 100vh;
@@ -39,7 +88,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 40px 20px;
+            padding: 120px 20px 40px;
         }
 
         .hero {
@@ -47,8 +96,9 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: clamp(3rem, 8vw, 5rem);
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .subtitle {
@@ -60,22 +110,27 @@
         .typewriter {
             font-family: 'Fira Code', monospace;
             color: var(--primary);
-            margin-bottom: 30px;
+            margin-bottom: 35px;
+            font-size: 1rem;
         }
 
-        .socials {
+        .hero-buttons {
             display: flex;
             justify-content: center;
             gap: 15px;
             flex-wrap: wrap;
         }
 
-        .socials a {
+        .hero-buttons a {
             padding: 12px 22px;
             border-radius: 10px;
             color: white;
-            text-decoration: none;
             font-weight: 600;
+            transition: 0.25s;
+        }
+
+        .hero-buttons a:hover {
+            transform: translateY(-4px);
         }
 
         .linkedin {
@@ -90,6 +145,12 @@
         .mail {
             background: #d14836;
         }
+
+        .cv-button {
+            background: var(--primary);
+        }
+
+        /* MAIN */
 
         .container {
             max-width: 1150px;
@@ -108,9 +169,15 @@
             padding-bottom: 10px;
         }
 
+        p {
+            color: #d0d7de;
+        }
+
+        /* GRID */
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
@@ -119,6 +186,13 @@
             border: 1px solid var(--border-color);
             border-radius: 18px;
             padding: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(66, 133, 244, 0.15);
         }
 
         .card h3 {
@@ -127,11 +201,13 @@
         }
 
         .date {
+            display: block;
+            margin-bottom: 15px;
             color: var(--text-secondary);
             font-size: 0.9rem;
-            margin-bottom: 15px;
-            display: block;
         }
+
+        /* SKILLS */
 
         .skills {
             display: flex;
@@ -144,242 +220,365 @@
             border: 1px solid var(--border-color);
             padding: 10px 16px;
             border-radius: 999px;
+            transition: 0.25s;
         }
 
-        .github-stats {
+        .skill:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* CONTACT */
+
+        .contact-links {
             display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .github-stats img,
-        .activity {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+        .contact-links a {
+            color: #d0d7de;
         }
 
-        .activity {
-            margin-top: 20px;
-            max-width: 100%;
+        .contact-links a:hover {
+            color: var(--primary);
         }
+
+        /* FOOTER */
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 35px;
             border-top: 1px solid var(--border-color);
             color: var(--text-secondary);
         }
 
+        /* MOBILE */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            .card {
+                padding: 22px;
+            }
+        }
+
     </style>
+
 </head>
 
 <body>
 
-<header>
+    <!-- NAVBAR -->
 
-    <div class="hero">
+    <nav class="navbar">
 
-        <h1>Rabia Ceyda Eken</h1>
-
-        <div class="subtitle">
-            Computer Engineering Student • AI • Data Science
+        <div class="logo">
+            Rabia Eken
         </div>
 
-        <div class="typewriter">
-            Building AI-powered and data-driven projects.
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </div>
 
-        <div class="socials">
+    </nav>
 
-            <a class="linkedin"
-               href="https://linkedin.com/in/rabia-eken-7a0a182a0"
-               target="_blank">
-               LinkedIn
-            </a>
+    <!-- HERO -->
 
-            <a class="github"
-               href="https://github.com/rabiaeken"
-               target="_blank">
-               GitHub
-            </a>
+    <header>
 
-            <a class="mail"
-               href="mailto:rabiaeken987@gmail.com">
-               Email
-            </a>
+        <div class="hero">
+
+            <h1>Rabia Ceyda Eken</h1>
+
+            <div class="subtitle">
+                Computer Engineering Student • AI • Data Science
+            </div>
+
+            <div class="typewriter">
+                Building AI-powered and data-driven projects.
+            </div>
+
+            <div class="hero-buttons">
+
+                <a class="linkedin"
+                   href="https://linkedin.com/in/rabia-eken-7a0a182a0"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+                <a class="github"
+                   href="https://github.com/rabiaeken"
+                   target="_blank">
+                    GitHub
+                </a>
+
+                <a class="mail"
+                   href="mailto:rabiaeken987@gmail.com">
+                    Email
+                </a>
+
+                <a class="cv-button"
+                   href="cv.pdf"
+                   target="_blank">
+                    Download CV
+                </a>
+
+            </div>
 
         </div>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <div class="container">
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <h2>👩‍💻 About Me</h2>
+
+            <p>
+                I am a Computer Engineering student at Istanbul Bilgi University
+                with strong interests in Artificial Intelligence, Data Science
+                and Software Development.
+            </p>
+
+            <br>
+
+            <p>
+                I develop projects using Python for data analysis, machine learning
+                and automation systems while improving my skills in cloud technologies
+                and modern software development.
+            </p>
+
+            <br>
+
+            <p>
+                I am also interested in embedded systems and hardware-based projects,
+                including Arduino applications and sensor-integrated systems.
+            </p>
+
+        </section>
+
+        <!-- EXPERIENCE -->
+
+        <section id="experience">
+
+            <h2>🚀 Experience & Roles</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>Software Persona (TNC Group)</h3>
+
+                    <span class="date">
+                        May 2026 – June 2026
+                    </span>
+
+                    <p>
+                        Incoming Software Engineering Intern gaining experience
+                        in real-world software development.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Bilgi AI Club</h3>
+
+                    <span class="date">
+                        2025 – Present
+                    </span>
+
+                    <p>
+                        Sponsorship & Partnerships Team Member supporting
+                        collaborations and event organization.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Beyoğlu Youth Center</h3>
+
+                    <span class="date">
+                        2024 – Present
+                    </span>
+
+                    <p>
+                        Volunteer Youth Leader contributing to community activities.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section id="projects">
+
+            <h2>🏗️ Projects</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>AWS Serverless Data Pipeline</h3>
+
+                    <p>
+                        Built a serverless data processing workflow using AWS Lambda,
+                        S3 and DynamoDB.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Medical Insurance Prediction</h3>
+
+                    <p>
+                        Developed a machine learning project involving data analysis
+                        and predictive modeling with Python.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Teknofest Immuno-Oncology 3T</h3>
+
+                    <p>
+                        Contributed to an AI-based healthcare project that advanced
+                        to the semi-final stage.
+                    </p>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>Arduino Smart System Project</h3>
+
+                    <p>
+                        Developed Arduino-based automation and sensor-integrated systems.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->
+
+        <section id="skills">
+
+            <h2>🛠️ Technical Skills</h2>
+
+            <div class="skills">
+
+                <div class="skill">Python</div>
+                <div class="skill">Java</div>
+                <div class="skill">C++</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Pandas</div>
+                <div class="skill">NumPy</div>
+                <div class="skill">Machine Learning</div>
+                <div class="skill">Data Science</div>
+                <div class="skill">AWS</div>
+                <div class="skill">Arduino</div>
+                <div class="skill">Linux</div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <h2>📬 Contact</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>Email</h3>
+
+                    <div class="contact-links">
+                        <a href="mailto:rabiaeken987@gmail.com">
+                            rabiaeken987@gmail.com
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>LinkedIn</h3>
+
+                    <div class="contact-links">
+                        <a href="https://linkedin.com/in/rabia-eken-7a0a182a0"
+                           target="_blank">
+                            linkedin.com/in/rabia-eken-7a0a182a0
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="card">
+
+                    <h3>GitHub</h3>
+
+                    <div class="contact-links">
+                        <a href="https://github.com/rabiaeken"
+                           target="_blank">
+                            github.com/rabiaeken
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </div>
 
-</header>
+    <!-- FOOTER -->
 
-<div class="container">
-
-    <section>
-
-        <h2>👩‍💻 About Me</h2>
-
-        <p>
-            I am a Computer Engineering student at Istanbul Bilgi University with
-            strong interests in Artificial Intelligence, Data Science and Software Development.
-        </p>
-
-        <br>
-
-        <p>
-            I develop projects using Python for data analysis, machine learning
-            and automation systems while improving my skills in cloud technologies
-            and modern software development.
-        </p>
-
-        <br>
-
-        <p>
-            I am also interested in embedded systems and hardware-based projects,
-            including Arduino applications and sensor-integrated systems.
-        </p>
-
-    </section>
-
-    <section>
-
-        <h2>🚀 Experience & Roles</h2>
-
-        <div class="grid">
-
-            <div class="card">
-
-                <h3>Software Persona (TNC Group)</h3>
-
-                <span class="date">
-                    May 2026 – June 2026
-                </span>
-
-                <p>
-                    Incoming Software Engineering Intern gaining experience in
-                    real-world software development.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Bilgi AI Club</h3>
-
-                <span class="date">
-                    2025 – Present
-                </span>
-
-                <p>
-                    Sponsorship & Partnerships Team Member supporting collaborations
-                    and event organization.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Beyoğlu Youth Center</h3>
-
-                <span class="date">
-                    2024 – Present
-                </span>
-
-                <p>
-                    Volunteer Youth Leader contributing to community activities.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section>
-
-        <h2>🏗️ Projects</h2>
-
-        <div class="grid">
-
-            <div class="card">
-
-                <h3>AWS Serverless Data Pipeline</h3>
-
-                <p>
-                    Built a serverless data processing workflow using AWS Lambda,
-                    S3 and DynamoDB.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Medical Insurance Prediction</h3>
-
-                <p>
-                    Developed a machine learning project involving data analysis
-                    and predictive modeling with Python.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Teknofest Immuno-Oncology 3T</h3>
-
-                <p>
-                    Contributed to an AI-based healthcare project that advanced
-                    to the semi-final stage.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Arduino Smart System Project</h3>
-
-                <p>
-                    Developed Arduino-based automation and sensor-integrated systems.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <section>
-
-        <h2>🛠️ Technical Skills</h2>
-
-        <div class="skills">
-
-            <div class="skill">Python</div>
-            <div class="skill">Java</div>
-            <div class="skill">C++</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Pandas</div>
-            <div class="skill">NumPy</div>
-            <div class="skill">Machine Learning</div>
-            <div class="skill">Data Science</div>
-            <div class="skill">AWS</div>
-            <div class="skill">Arduino</div>
-            <div class="skill">Linux</div>
-
-        </div>
-
-    </section>
-
-</div>
-
-<footer>
-    © 2026 Rabia Ceyda Eken • Portfolio Website
-</footer>
+    <footer>
+        © 2026 Rabia Ceyda Eken • Portfolio Website
+    </footer>
 
 </body>
+
 </html>
-<!-- update -->
